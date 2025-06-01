@@ -33,6 +33,9 @@ class Server {
     };
 
     routes() {
+        this.app.get("/", (req, res) => {
+            res.send("Servidor corriendo correctamente");
+        });
         this.app.use("/api/users", userRoutes);
         this.app.use("/api/auth", authRoutes);
         this.app.use("/api/users/courses", coursesRoutes);
