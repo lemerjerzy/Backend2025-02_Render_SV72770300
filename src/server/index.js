@@ -34,7 +34,7 @@ class Server {
 
     routes() {
         this.app.get("/", (req, res) => {
-            res.send({
+            res.json({
                 message: "Servidor corriendo correctamente",
             });
         });
