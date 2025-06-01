@@ -34,7 +34,9 @@ class Server {
 
     routes() {
         this.app.get("/", (req, res) => {
-            res.json("Servidor corriendo correctamente");
+            res.send({
+                message: "Servidor corriendo correctamente",
+            });
         });
         this.app.use("/api/users", userRoutes);
         this.app.use("/api/auth", authRoutes);
